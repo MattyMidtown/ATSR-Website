@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h4> Finish Order </h4>
+<h6> Please assign a 3-10 digit number to the OrderID field, specify when you will be needing these tools, today's date, your account ID, and the tools you just selected.</h6>
+<form action='.' method='POST'>{% csrf_token %}
+    {{ form.as_p }}
+    <input type='submit' value='Save' />
+</form>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h4> Create your order </h4>
+<h6> Select the item you want and the quantity (one product per order). Then, assign an ID to your desired item(s)</h6>
+<form action='.' method='POST'>{% csrf_token %}
+    {{ form.as_p }}
+    <input type='submit' value='Save' />
+</form>
+{% endblock %}

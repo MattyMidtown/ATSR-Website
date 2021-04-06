@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load mathfilters %}
+
+
+{% block content %}
+
+
+{% for instance in object_list %}
+<h2> Your quote is:</h2>
+<h1>${{ instance.totalitemcost|mul:5 }}</h1>
+
+<button><a href="{% url 'orders' %}">Approve!</a></button>
+
+
+      {% endfor %}
+
+
+{% endblock %}

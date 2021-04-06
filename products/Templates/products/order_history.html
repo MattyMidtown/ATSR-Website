@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load bootstrap %}
+
+{% block title %}Your Order History{% endblock title %}
+{% block content %}
+
+<div class="container">
+
+<form method="GET">
+{{ filter.form|bootstrap }}
+<button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+<h1> Your Rentals</h1>
+<h3> Below you will find your orders, both active and past rentals</h3>
+<div>
+{% for orders in filter.qs %}
+
+<h6> <u> {{ orders.orderid }} </u></h6>
+<li> Start Date: {{ orders.startdate }}</li>
+<li> End Date: {{ orders.enddate }} </li>
+
+
+{% endfor %}
+</div>
+{% endblock %}

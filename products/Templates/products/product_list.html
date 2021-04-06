@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% load bootstrap4 %}
+
+{% block content %}
+
+<h1> Products</h1>
+<h3> Look below to choose from our vast array of construction equipment</h3>
+<div>
+{% for instance in object_list %}
+   <ul> <h3>{{ instance.name }}</h3>
+
+   <li> 
+    {{ instance.model }}</li>
+
+<li>Weight: {{ instance.weight }} lbs</li>
+
+<li>Cost per day: ${{ instance.rentalcost }}  </li>
+<p> Product ID: {{ instance.productid }}</p>
+ 
+
+</ul>
+</div>
+
+
+{% endfor %}
+
+{% endblock %}
