@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang='en'></html>
+{% block content %}
+                       <h1>Welcome to the Apex Tools Rental Services site!</h1>
+                       <h2>Are you a business in need of equipment to rent for a construction project?</h2>
+                       <h4> Login below to make an order! </h4>
+
+<button><a href="{% url 'login' %}">Login</a> </button>
+<button><a href="{% url 'register' %}">No account? Register here!</a> </button> 
+
+
+<h3> <a href="{% url 'product' %}"><h3>Products Page</h3></a></h3>
+
+
+
+
+{% endblock %}
+
