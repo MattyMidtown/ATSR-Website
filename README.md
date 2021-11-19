@@ -1,4 +1,4 @@
-# ATSR-Website
+# ATRS-Website
 ITM90B Django Website for bonus implementation
 
 I lead the design and creation of an ecommerce website for my group's capstone project, using Django, a Python based web framework. Making the website was a bonus. None of us had any prior experience using Python for development (or any experience developing at all), so it was a major learning curve. 
